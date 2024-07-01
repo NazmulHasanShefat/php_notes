@@ -49,7 +49,7 @@
         [1,"Nazmul Hasan","Wahidur Rahman","mdnazmulhasan0879@gmail.com","Laxmipur"],
         [2,"Ahsan Habib","Habibur Rahman","ahsanhabib@gamil.com","Laxmipur Hat"],
         [3,"Al-amin","Chan miya","alamin@gmail.com","Toltoliya para"],
-        [4,"Al-amin","Chan miya","alamin@gmail.com","Toltoliya para"],
+        [4,"Al-amin","Chan miya","alamin@gmail.com","Toltoliya para"]
      ];
 
      echo "<table class='mytable'>";
