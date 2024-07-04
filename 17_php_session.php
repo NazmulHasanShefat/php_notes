@@ -5,6 +5,4 @@
 // varify the user login info;
 session_start();
 
-
-
 ?>
