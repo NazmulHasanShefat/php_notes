@@ -5,4 +5,10 @@
 // varify the user login info;
 session_start();
 
+$_SESSION["userName"] = "Nazmul Hasan";
+$_SESSION["favcolor"] = "red";
+$_SESSION["favAnimal"] = "cat";
+
+echo "we have start your sassion";
+
 ?>
