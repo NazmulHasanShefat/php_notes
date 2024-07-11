@@ -58,14 +58,31 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
-
 <?php
-session_start();
 
+?>
+<?php
+ if($_REQUEST){
+  session_start();
+  $_SESSION["username"] = $_POST["name"];
+  $_SESSION["country"] = $_POST["country"];
+  $_SESSION["subject"] = $_POST["subject"];
+ }
+
+// session_start();
 if(isset($_SESSION["username"])){
+  $path = $_FILES["file_img"]["name"];
+      $temp_name = $_FILES["file_img"]["tmp_name"];
+      $folder = "./images/".$path;
+      if(move_uploaded_file($temp_name,$folder)){
+        echo "session started";
+      }
+      else{
+        echo "faild to upload";
+      }
     echo '<h2 style="text-align:center" class="top-titel">User Profile Card</h2>';
     echo '<div class="card">';
-    echo '<img src="images/23170269.jpg" alt="John" style="width:100%">';
+    echo "<img src='$folder' style='width:100%'>";
     echo '<h1>';
     echo $_SESSION["username"];
     echo "</h1>";
@@ -82,7 +99,7 @@ if(isset($_SESSION["username"])){
                     <a href="#"><i class="fa fa-facebook"></i></a> 
                     </div>
     ';
-    echo '<a href ="logout/session_end.php"><button>logout</button></a>';
+    echo '<a href ="./session_end.php"><button>logout</button></a>';
     echo '</div>';
 }
 else{
@@ -92,7 +109,7 @@ else{
     <h5 class="card-title">you are log out plase login</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content</p>
     <a href= "" class="btn btn-primary">contuct us</a>
-    <a href="./login.html" class="btn btn-primary">login</a>
+    <a href="./login.php" class="btn btn-primary">login</a>
   </div>
 </div>';
 }

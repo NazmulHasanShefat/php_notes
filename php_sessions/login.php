@@ -77,7 +77,7 @@
 <p>Resize the browser window to see the effect. When the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other.</p>
 
 <div class="container">
-  <form action="./session_create.php" method="post" enctype="multipart/form-data">
+  <form action="./session_started.php" method="post" enctype="multipart/form-data">
   <div class="row">
     <div class="col-25">
       <label for="fname">upload Your image</label>

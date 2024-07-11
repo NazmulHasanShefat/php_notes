@@ -28,7 +28,7 @@ echo '<div class="card mt-5 m" style="width: 18rem;">
     <h5 class="card-title">you are log out plase login</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content</p>
     <a href="#" class="btn btn-primary">contuct us</a>
-    <a href="./login.html" class="btn btn-primary">login</a>
+    <a href="./login.php" class="btn btn-primary">login</a>
   </div>
 </div>';
 ?>
